@@ -7,11 +7,11 @@ import datetime
 class Alg:
 
     def __init__(self, dt_from: datetime, dt_upto: datetime, group_type: str, input_data) -> None:
-        self.dt_from = dt_from
-        self.dt_upto = dt_upto
-        self.group_type = group_type
-        self.input_data = input_data
-        self.result = {}
+        self._dt_from = dt_from
+        self._dt_upto = dt_upto
+        self._group_type = group_type
+        self._input_data = input_data
+        self._result = {}
 
     # метод часовой агрегации
     def hour_type(self):
@@ -30,4 +30,4 @@ class Alg:
         month = datetime.timedelta(month=1)
 
     def get_result(self):
-        return self.result 
+        return self._result 
