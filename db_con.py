@@ -21,5 +21,5 @@ class DbConnector:
     
     # выбор коллекции (выбор необходимой коллекции)
     def choice_collection(self):
-        collection = self.start_connect()[self._collection_name]
-        return collection
+        db_collection = self.start_connect()[self._collection_name]
+        return db_collection
